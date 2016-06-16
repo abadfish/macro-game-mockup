@@ -6,6 +6,7 @@ class CreateTrades < ActiveRecord::Migration
       t.string :product
       t.date :trade_date
       t.integer :user_id
+      t.decimal :price
     end
   end
 end

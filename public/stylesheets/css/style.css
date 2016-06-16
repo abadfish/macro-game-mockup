@@ -81,12 +81,12 @@ html {
 }*/
 
 body {
-  background: url('../images/') center no-repeat;
+  background: url('../css/images/home-bg.jpg') center no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  font-family: "Courier New", Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 
-  font-size: 100%;
+  font-size: 125%;
 }
 
 .wrapper {
@@ -98,7 +98,7 @@ body {
 #content {
   padding: 60px;
   text-align: center;
-  background: rgba(0,0,0,.85);
+  background: rgba(0,0,0,.75);
   color: rgb(57,255,20);
 }
 
@@ -271,6 +271,7 @@ sub {
 
 img {
     border: 0;
+    opacity: 0.4;
 }
 
 /**

@@ -1,7 +1,7 @@
 require './config/environment'
 class ApplicationController < Sinatra::Base
-
-  set :session_secret, "secret_sauce"
+  set :database_file,'config/database.yml'
+  set :session_secret, 'secret_sauce'
   enable :sessions
 
   configure do

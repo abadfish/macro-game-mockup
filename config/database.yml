@@ -1,0 +1,17 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: <%= ENV['RDS_DB_NAME'] %>
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOST'] %>
+  port: <%= ENV['RDS_PORT'] %>
+​
+development:
+  adapter: sqlite3
+  database: db/usersandtradesdb.sqlite3
+​
+test:
+  adapter: sqlite3
+  database: db/usersandtradesdb.sqlite3
