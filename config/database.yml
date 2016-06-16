@@ -7,11 +7,11 @@ production:
   password: <%= ENV['RDS_PASSWORD'] %>
   host: <%= ENV['RDS_HOST'] %>
   port: <%= ENV['RDS_PORT'] %>
-​
+
 development:
   adapter: sqlite3
   database: db/usersandtradesdb.sqlite3
-​
+
 test:
   adapter: sqlite3
   database: db/usersandtradesdb.sqlite3
