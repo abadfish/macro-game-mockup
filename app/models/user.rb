@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_secure_password
   has_many :trades
+  has_many :posts
 
   def slug
     self.username.downcase.split(" ").join("-")

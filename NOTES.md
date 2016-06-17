@@ -27,9 +27,21 @@ if @trade.product == Trade.find_by(params[:product])
 
 -chart trades?
 
+-trades should be in table format
+
 -put which trader made the trades next to the trade.
 
 
-
+Make it so only Darren or I can add posts.
+if is_logged_in? && username == darren
 
 scrape from http://www.barchart.com/chart.php?sym=ESU16&t=BAR&size=M&v=2&g=1&p=I:5&d=L&qb=1&style=technical&template=
+
+-remember that I took this out. Will have to go somewhere else:
+get '/' do
+  *if is_logged_in?
+    *erb :'/trades/trades'
+  *else
+  erb :index
+  *end
+end

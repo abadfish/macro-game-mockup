@@ -1,0 +1,19 @@
+body {
+  background: url('../css/images/ft_1888_front.jpg') center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 90%;
+  padding-bottom: 40px;
+}
+
+#content {
+  padding: 20px;
+  text-align: center;
+  background: rgba(255,255,255,.95);
+  color: rgb(0,0,0);
+}

@@ -4,6 +4,7 @@ class TradesController < ApplicationController
 
   get '/trades' do
     if is_logged_in?
+      Trade.update_current_prices
       @trades = Trade.all
       erb :'/trades/trades'
     else

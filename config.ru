@@ -7,4 +7,6 @@ end
 use Rack::MethodOverride
 use UsersController
 use TradesController
+use PostsController
+use GamesController
 run ApplicationController

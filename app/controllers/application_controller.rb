@@ -11,11 +11,8 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-    if is_logged_in?
-      erb :'/trades/trades'
-    else
-      erb :index
-    end
+    @posts = Post.all
+    erb :index
   end
 
   helpers do
