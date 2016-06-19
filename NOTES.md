@@ -45,3 +45,8 @@ get '/' do
   erb :index
   *end
 end
+
+Fake market tickers
+news feed
+chat room
+free gifts at login

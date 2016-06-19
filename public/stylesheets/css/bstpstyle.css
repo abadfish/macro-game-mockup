@@ -31,7 +31,7 @@ figure {
 figcaption {
   font: normal 0.75em/1.5em 'Elsie Swash Caps', cursive;
   color: #777;
-  text-align: right;
+  text-align: left;
 }
 
 table {
@@ -66,11 +66,13 @@ input, textarea {
 
 input[type="submit"] {
   margin-top: 5px;
+  margin-left: 15px;
   width: 100px;
   background: black;
   color: white;
   border-radius: 25px;
   border: 0;
+  clear: both;
 }
 
 input[type="submit"]:hover {
@@ -86,7 +88,7 @@ iframe {
 }
 
 .milk-text {
-  font: bold 2.6em 'Elsie Swash Caps', cursive;
+  font: bold 2.6em 'Trebuchet', cursive;
   color: white;
   text-shadow: 0 2px 3px #000;
 }
@@ -104,8 +106,9 @@ iframe {
 /*////////// BACKGROUNDS //////////*/
 
 .fintimes {
-  background: url(../css/images/ft_1888_front.jpg) no-repeat center top;
-  background-size: cover;
+  /*background: url('../images/home-bg.jpg') no-repeat center;*/
+  background: #white;
+  background-size: 100% 100%;
 }
 
 .light-fade {
@@ -132,8 +135,8 @@ iframe {
 /*/////// MEDIA ////////*/
 
 img, video, audio, iframe, table, form {
-  width: 100%; /* IE */
-  max-width: 100%; /* FF, Safari, Chrome */
+  width: 90%; /* IE */
+  max-width: 90%; /* FF, Safari, Chrome */
 }
 
 /*////////// FIXES //////////*/
@@ -160,18 +163,23 @@ img, video, audio, iframe, table, form {
 /*/////// LAYOUT ////////*/
 
 .wrapper {
-  width: 960px;
+  width: 100%;
   margin: 0 auto;
 }
 
 .col-1 {
+
+  position: absolute;
+  display: inline-block;
+  clear: right;
   float: left;
-  width: 32%;
+  width: 30%;
 }
 
 .col-2 {
   float: left;
   width: 66%;
+  display: inline;
 }
 
 .col-3 p {
@@ -214,7 +222,7 @@ img, video, audio, iframe, table, form {
 }
 
 a.fbook, a.twit, a.gplus {
-  background: url(../css/images/social-icons.png) no-repeat;
+  background: url(../images/social-icons.png) no-repeat;
 }
 
 a.fbook { background-position: 0 0; }
@@ -288,6 +296,7 @@ header {
 
 #logo {
   padding: 74px 0 0;
+  text-align: center;
 }
 
 #logo h1 {
@@ -298,13 +307,13 @@ header {
   white-space: nowrap;
   overflow: hidden;
   margin: 0;
-  background: url(../css/images/globe2.jpg) no-repeat;
+  background: url(../images/globe2.jpg) no-repeat;
   background-size: 100% 100%;
 }
 
 #logo h2 {
   display: inline-block;
-  font: 2.5em "Clicker Script", cursive;
+  font: 2.5em Impact, cursive;
   margin: 0;
   position: relative;
   top: -9px;
@@ -315,12 +324,36 @@ header {
 /*////////// MAIN SECTIONS //////////*/
 
 section {
-  padding: 30px;
+  padding: 10px;
   margin-bottom: 20px;
-  background: white;
+  margin-right: 10px;
+  border: 10px;
+  /*color: white;*/
+  font: .75em "Trebuchet MS", Arial, sans-serif;
+  text-align: left;
+
+}
+
+section:hover {
+  background: #efefef; /* Old browsers */
+  background: -moz-linear-gradient(top,  #efefef 0%, #ffffff 24%, #ffffff 68%, #dddddd 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(24%,#ffffff), color-stop(68%,#ffffff), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #efefef 0%,#ffffff 24%,#ffffff 68%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #efefef 0%,#ffffff 24%,#ffffff 68%,#dddddd 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #efefef 0%,#ffffff 24%,#ffffff 68%,#dddddd 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #efefef 0%,#ffffff 24%,#ffffff 68%,#dddddd 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+}
+
+#center-text {
+  text-align: center;
 }
 
 /*////////// DETAILS //////////*/
+
+a {
+  color: #333;
+}
 
 #details {
   border-top: 1px solid white;
@@ -337,7 +370,7 @@ section {
 
 #details a:hover {
   color: black;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 #details a:active {

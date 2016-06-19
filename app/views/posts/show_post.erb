@@ -36,34 +36,27 @@
       </header>
 
       <div class="wrapper clearfix">
+        <section class="col-2"
+          <h1>Post #<%= @post.id %></h1>
 
-        <section id="center-text" class="col-2 first">
-          <h1>This will be a table of current trades on the book, prices, p/l</h1>
-          <h1>Welcome, <%= current_user.username %></h1>
-          <h2>All Open Positions: </h2>
-          <% Trade.all.each do |trade| %>
-            <h3><a href="/users/<%= trade.user_id %>/trades"> Trader: <%= trade.user.username %> </a></h3>
-            <p><a href="/trades/<%= trade.id %>"><%= trade.id %>>>></a>
-              <% if trade.direction.downcase == "buy" %>
-                Long <%= trade.size %> <%= trade.product %> @ <%= trade.price %> <%= trade.current_price %> <%= trade.trade_date %>
-              <% elsif trade.direction.downcase == "sell" %>
-                Short <%= trade.size %> <%= trade.product %> @ <%= trade.price %> <%= trade.current_price %> <%= trade.trade_date %>
-              <% end %>
-              </p>
-          <% end %>
+            <h4><%= @post.title %></h4>
+            <h4>By <%= @post.author %></h4>
+            <h4><%= @post.content %></h4>
+            <h4><%= @post.post_date %></h4>
 
-          <form action="trades/new" method="GET">
-            <p><input type="submit" value="New Trade"></p>
-          </form>
+            
 
-          <form action="/logout" method="GET">
-            <p><input type="submit" value="Log Out"></p>
-          </form>
+            <form action="/posts/<%= @post.id %>/edit" method="get">
+              <p><input type="submit" value="Edit Post"></p>
+            </form>
+
+            <form action="/posts/<%= @post.id %>/delete" method="post">
+              <input id="hidden" type="hidden" name="_method" value="delete">
+              <p><input type="submit" value="Delete Post"></p>
+            </form>
+            <h3><a href="/">HOME</a></h3>
         </section>
-
-
-        </div>
       </div>
-    </body>
-
-  </html>
+    </div>
+  </body>
+</html>

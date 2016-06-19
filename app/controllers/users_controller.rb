@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     unless is_logged_in?
       erb :'/users/login'
     else
-      redirect '/trades'
+      redirect '/'
     end
   end
 
